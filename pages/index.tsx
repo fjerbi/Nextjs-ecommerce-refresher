@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import type { InferGetStaticPropsType } from "next";
+import { Layout } from "../components/common";
 import getAllProducts from "../framework/shopify/product/get-all-products";
 
 export default function Home({
@@ -15,3 +16,6 @@ export async function getStaticProps() {
     revalidate: 1,
   };
 }
+
+
+Home.Layout = Layout;
